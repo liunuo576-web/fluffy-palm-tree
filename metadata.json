@@ -1,0 +1,6 @@
+{
+  "name": "镜锢 · AI纪元社会治理系统",
+  "description": "基于毕业设计的AI统治纪元社会分类与职业评定互动测试系统 v2.7.3",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
