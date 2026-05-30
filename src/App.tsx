@@ -31,15 +31,15 @@ import {
   CasteType,
   CitizenProfile
 } from './types';
-import bgPage01 from '../assets/00.png';
-import bgPage02 from '../assets/01.png';
-import bgPage03 from '../assets/02.png';
-import bgPage04 from '../assets/03.png';
-import bgResultAlpha from '../assets/04.png';
-import casteBadgeImage from '../assets/ALPHA.png';
-import omegaBadgeImage from '../assets/OMEGA.png';
-import betaBadgeImage from '../assets/BETA.png';
-import borderFrame from '../assets/边框.png';
+import bgPage01 from '../assets/00.webp';
+import bgPage02 from '../assets/01.webp';
+import bgPage03 from '../assets/02.webp';
+import bgPage04 from '../assets/03.webp';
+import bgResultAlpha from '../assets/04.webp';
+import casteBadgeImage from '../assets/ALPHA.webp';
+import omegaBadgeImage from '../assets/OMEGA.webp';
+import betaBadgeImage from '../assets/BETA.webp';
+import borderFrame from '../assets/边框.webp';
 
 const OPTION_TRANSLATIONS: Record<string, string> = {
   // Q1
