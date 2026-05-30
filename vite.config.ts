@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/fluffy-palm-tree/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
