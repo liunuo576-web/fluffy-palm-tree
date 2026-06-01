@@ -413,7 +413,7 @@ export default function App() {
   const accentColor = results?.caste === 'OMEGA' ? '#FE0000' : results?.caste === 'BETA' ? '#FFF600' : '#ABFA00';
 
   return (
-    <div className="w-screen h-screen bg-[#080808] text-[#b8b8b0] font-sans font-light relative flex flex-col justify-between overflow-hidden selection:bg-[#ff0001] selection:text-white">
+    <div className="bg-[#080808] text-[#b8b8b0] font-sans font-light relative flex flex-col justify-between overflow-hidden selection:bg-[#ff0001] selection:text-white" style={{ width: 1920, height: 1080 }}>
 
       {/* Visual background elements */}
       <div className="absolute inset-0 hud-grid opacity-30 pointer-events-none" />
@@ -492,7 +492,7 @@ export default function App() {
             {/* Start Button */}
             <button
               onClick={() => setStep(1)}
-              className="group relative flex items-center justify-between border border-[#4a4a46] hover:border-[#ff0001] transition-all duration-300 w-[35vw] h-16 px-6 bg-transparent text-left overflow-hidden cursor-pointer"
+              className="group relative flex items-center justify-between border border-[#4a4a46] hover:border-[#ff0001] transition-all duration-300 w-[672px] h-16 px-6 bg-transparent text-left overflow-hidden cursor-pointer"
             >
               {/* Red fill on hover */}
               <div className="absolute inset-0 bg-[#ff0001] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 pointer-events-none" />
@@ -512,9 +512,9 @@ export default function App() {
 
         {/* ==================== PAGE 2: INITIAL PROFILE PAGE ==================== */}
         {step === 1 && (
-          <div className="w-full max-w-[85vw] space-y-8 flex flex-col" style={{ transform: 'translateY(-20%)' }}>
+          <div className="w-full max-w-[1632px] space-y-8 flex flex-col" style={{ transform: 'translateY(-20%)' }}>
 
-            <form onSubmit={handleProfileSubmit} noValidate className="space-y-16 max-w-[85vw]" style={{ position: 'relative' }}>
+            <form onSubmit={handleProfileSubmit} noValidate className="space-y-16 max-w-[1632px]" style={{ position: 'relative' }}>
 
               {/* Status indicator */}
               <div className="absolute z-10 flex items-center space-x-2 text-xs" style={{ left: -65, top: -280, fontFamily: 'GeelyDesignType', fontWeight: 300, color: 'rgb(174, 254, 0)' }}>
@@ -589,7 +589,7 @@ export default function App() {
               <div className="absolute z-10" style={{ left: 420, top: 290 }}>
                 <button
                   type="submit"
-                  className="group relative flex items-center justify-between border border-[#4a4a46] hover:border-[#ff0001] transition-all duration-300 w-[35vw] h-16 px-6 bg-transparent text-left overflow-hidden cursor-pointer"
+                  className="group relative flex items-center justify-between border border-[#4a4a46] hover:border-[#ff0001] transition-all duration-300 w-[672px] h-16 px-6 bg-transparent text-left overflow-hidden cursor-pointer"
                 >
                   {/* Red fill on hover */}
                   <div className="absolute inset-0 bg-[#ff0001] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 pointer-events-none" />
@@ -611,7 +611,7 @@ export default function App() {
 
         {/* ==================== PAGE 3: FACE SCANNING PAGE ==================== */}
         {step === 2 && (
-          <div className="w-full max-w-[85vw] space-y-6">
+          <div className="w-full max-w-[1632px] space-y-6">
             <div className="pb-3">
               <div className="absolute z-10 text-xs font-mono text-[#e6ff00]" style={{ transform: 'translate(7%, -240%)' }}>
                 <span className="inline-block h-3 w-3 border-2 border-[#e6ff00] border-t-transparent rounded-full animate-spin mr-1.5" />
@@ -662,7 +662,7 @@ export default function App() {
                   <div className="absolute left-0 right-0 h-[3px] bg-[#ff0001] shadow-[0_0_12px_#ff0001] z-10 pointer-events-none animate-[scanlineAnimation_2.5s_linear_infinite]" />
 
                   {/* Scientific text stats overlay */}
-                  <div className="absolute top-3 left-3 bg-black/75 border border-[#4a4a46] p-3 text-[14px] text-[#b8b8b0] leading-relaxed space-y-1 z-10 max-w-[50vw]" style={{ fontFamily: 'GeelyDesignType', fontWeight: 300 }}>
+                  <div className="absolute top-3 left-3 bg-black/75 border border-[#4a4a46] p-3 text-[14px] text-[#b8b8b0] leading-relaxed space-y-1 z-10 max-w-[960px]" style={{ fontFamily: 'GeelyDesignType', fontWeight: 300 }}>
                     <p className="text-[#ff0001] font-bold text-base" style={{ fontFamily: 'GeelyDesignType', fontWeight: 700 }}>美学标准扫描仪</p>
                     <p>公民: {profile.name || '未知'}</p>
                     <p>模型ID: 阈值=147_A-GEN</p>
@@ -726,7 +726,7 @@ export default function App() {
                   <button
                     disabled={scanningProgress < 100}
                     onClick={() => setStep(3)}
-                    className={`group relative flex items-center justify-between border w-[35vw] h-16 px-6 bg-transparent text-left overflow-hidden cursor-pointer transition-all ${
+                    className={`group relative flex items-center justify-between border w-[672px] h-16 px-6 bg-transparent text-left overflow-hidden cursor-pointer transition-all ${
                       scanningProgress >= 100
                         ? 'border-[#ff0001] hover:border-[#ff0001]'
                         : 'border-[#4a4a46] opacity-40 cursor-not-allowed'
@@ -760,7 +760,7 @@ export default function App() {
           const currentQuestion = QUESTIONS[qIndex];
 
           return (
-            <div className="w-full max-w-[85vw] space-y-8 animate-[fadeIn_0.4s_ease-out] flex flex-col items-stretch">
+            <div className="w-full max-w-[1632px] space-y-8 animate-[fadeIn_0.4s_ease-out] flex flex-col items-stretch">
               
               {/* Progress & Status Indicators - Left Aligned */}
               <div className="flex flex-col items-start space-y-2 text-left">
@@ -841,7 +841,7 @@ export default function App() {
 
         {/* ==================== PAGE 14: RESULT CASTE SHEET ==================== */}
         {step === 13 && results && casteDetails && (
-          <div className="w-full max-w-[85vw] space-y-8 animate-[fadeIn_0.5s_ease-out]" style={{ transform: 'translateY(calc(20% - 30px))' }}>
+          <div className="w-full max-w-[1632px] space-y-8 animate-[fadeIn_0.5s_ease-out]" style={{ transform: 'translateY(calc(20% - 30px))' }}>
             
             {/* Layout Split: Huge badge / Details */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
